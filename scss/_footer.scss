@@ -1,0 +1,46 @@
+footer {
+    background-color: transparent;
+    margin-top: auto;
+    padding: 0;
+    font-size: .75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5rem;
+    margin: 0 1rem;
+    .contact-links {
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+    
+    }
+    
+    #target {
+        width:.1px;
+        height:.1px;
+        border:none;
+      }
+
+      .email-and-copy {
+          display: flex;
+             button {
+          border: none;
+          background: none;
+          width: 1rem;
+          
+          svg {
+              width: .75rem;
+              margin-top: -.3rem ;
+          }
+      }
+      }  
+}
+
+@media (min-width: $breakpoint-tablet) {
+
+   footer {
+       grid-column: 1/2;
+       align-items: flex-end;
+     
+   }
+}

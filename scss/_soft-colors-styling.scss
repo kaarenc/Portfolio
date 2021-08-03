@@ -1,0 +1,48 @@
+.soft-colors {
+    header svg {
+        margin: 1rem;
+        height: 3rem;
+        path {
+        stroke: white;
+        }
+      
+    
+    };
+
+    .main-title {
+    background: url("../images/flower.png");
+    background-repeat: no-repeat;
+    border-color: #98A886;
+}
+    background-color: #ba7c65;
+    color: rgb(41, 45, 21);
+
+    .menu {
+        border-left: 2px solid #98A886;
+    }
+    .main-navigation {
+       
+
+         border-left: none;
+        
+        li {
+            border-color: #98A886;
+       
+        a{
+            color: rgb(63, 69, 33); 
+        }
+       
+    } }
+
+
+ .main-title {
+    background-color: rgba(255, 255, 255, 0.44);
+    svg path{
+    
+        stroke: rgb(63, 69, 33);
+    }
+}
+
+
+
+}

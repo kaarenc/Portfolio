@@ -1,0 +1,263 @@
+.main-navigation li{
+    border-top: 1px rgb(255, 255, 255) solid;
+    list-style: none;  
+    text-align: center; 
+    border-collapse: collapse;
+    padding: 2rem 0;
+    width: 50%;
+}
+
+.home-wrapper .main-navigation {
+    ul {
+      border-left: none;
+    }
+  li {
+    width: 100%;
+
+    
+    .projects-link {
+      border-left: 3px white solid;
+    }
+    .contact-links {
+      
+      display: flex;
+      justify-content: center;
+      
+      align-items: center;
+      i {
+        font-size: 2rem;
+        margin: 1rem 2rem;
+      }
+}
+  }}
+
+
+
+
+.main-navigation ul{
+
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    background-color: inherit;
+} 
+
+.main-navigation a{
+    text-decoration: none;
+    
+    height: 100%;
+    padding: 1rem 01rem;
+}
+
+.main-navigation p {
+    padding: 0 1rem;
+}
+
+.about-wrapper .main-navigation,
+.projects-wrapper  .main-navigation{
+   
+   ul {
+    border: black solid 1px;
+    box-shadow: 0px 0px 15px 10px #23232333;
+     background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+    li {
+       padding: 0; 
+       border-top: 1px rgb(0, 0, 0) solid;
+       width: 100%;
+       ;
+       
+       a,
+       p,
+       i,
+       h2 {
+       color: rgb(0, 0, 0);
+       }
+    }
+    .contact-nav {
+      height: 100%;
+      padding: 1rem 0 0 0;
+    .contact-links {
+      
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      
+      i {
+        height: 100%;
+        font-size: 2rem;
+      }
+    }}
+}
+    
+}
+
+
+
+
+
+
+
+
+//mobile navigation
+.projects-wrapper,
+.about-wrapper{
+    .main-navigation {
+	ul {
+		display: none;
+	}
+}
+
+
+.nav-tgl {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  right: 10px;
+  bottom: 4rem;
+  width: 70px;
+  height: 70px;
+  border: 2px rgba(0, 0, 0, 0.495) solid;
+  border-radius: 50%;
+  padding: 0;
+  background: rgb(255, 255, 255);
+	box-shadow: 0px 4px 24px rgba(rgb(0, 0, 0), 0.50);
+  line-height: 0.6;
+  text-align: center;
+  z-index: 200;
+	
+	// making the dividers
+	> span {
+		// the second divider
+		display: inline-block;
+		position: relative;
+		height: 2px;
+		width: 34px;
+		border-radius: 1px;
+		background: #000000;
+		vertical-align: middle;
+		
+		// the first & the third dividers
+		&:before, &:after {
+		  display: inline-block;
+			position: absolute;
+			content: "";
+			height: 2px;
+			border-radius: 1px;
+			background: #000000;
+			// for the hover state
+			transition: all 200ms;
+		}
+		&:before {
+		  top: -11px;
+			left: 3px;
+			width: 28px;
+		}
+		&:after {
+		  top: 11px;
+			left: 6px;
+			width: 22px;
+		}
+	}
+	
+	// ofcorse we should find a replacement for the focus state but it's not our topic
+	&:focus {outline: none}
+	
+	&:hover > span:after, &:hover > span:before {
+		width: 34px;
+		left: 0;
+	}
+}
+
+// for the nav background (styling the nav itself is not our topic)
+@mixin animationOpen {
+    animation: nav-toggle-open 500ms; 
+
+   @keyframes nav-toggle-open {
+    100% {clip-path: circle(100% at 80% 51%)}
+    0% {clip-path: circle(0% at 100% 100%)}
+    
+} 
+}
+
+@mixin animationClose {
+    animation: nav-toggle-closed 500ms; 
+
+   @keyframes nav-toggle-closed {
+    0% {clip-path: circle(100% at 80% 51%)}
+    100% {clip-path: circle(0% at 89% 86%)}
+    
+}   
+}
+
+.main-navigation {
+    ul {
+        @include animationClose;
+    }
+}
+
+
+.active .main-navigation {
+	ul {
+        display: flex;
+        flex-direction: column;
+        @include animationOpen;
+        
+	}
+}
+
+
+
+
+.main-navigation:before {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100vw;
+  height: 5rem;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 500ms ease-in-out;
+	
+	// that's all the pen about
+  clip-path: circle(30px at calc(100% - 65px) 65px);
+	// for AT
+  visibility: hidden;
+}
+
+// when it gits activated
+.menu.active {
+	.active .main-navigation:before {
+        visibility: visible;
+        display: flex;
+         flex-direction: row;
+
+		// that's all the pen about
+		clip-path: circle(100%);
+	}
+	
+	.nav-tgl > span {
+		height: 0;
+		&:after, &:before {
+		  top: 0px;
+			left: 0;
+			width: 34px;
+		}
+		&:after {
+		  transform: rotate(-45deg);
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+	}
+}}

@@ -1,0 +1,108 @@
+header {
+    position: relative;
+}
+.color-change-and-help {
+    position: absolute;
+    right: 0;
+    top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-start;
+    .tooltip {
+       display: none;
+}
+.color-button-nav {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+   
+    .color-button-form{
+        display: flex;
+    }
+}
+}
+
+.color-button-nav label {
+    font-size: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(0, 0, 0, 0.064);;
+}
+
+.color-button-nav input {
+     -webkit-appearance: none;
+     margin: 2px
+}
+
+.color-button-nav #color-change {
+    background-color: inherit;
+    border: 2px white solid;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+ }
+
+
+.color-button-nav .night-vision {
+   background-color: black;
+   border: 2px white solid;
+   border-radius: 50%;
+   width: 2rem;
+   height: 2rem;
+}
+
+.color-button-nav .red-black {
+    background-color: rgb(123, 15, 15);
+    border: 2px rgb(0, 0, 0) solid;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+ }
+
+ .color-button-nav .soft-colors {
+    background-color: #bc5e52;
+    border: 5px rgb(120, 199, 156) solid;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+ }
+
+@media (min-width: $breakpoint-mobile-wide){
+ .color-change-and-help{
+
+ .tooltip {
+     display: flex; 
+    position: absolute;
+    right: 9.5rem;
+    top: .2rem;
+    cursor: pointer;
+    
+    svg{
+        width: 2rem;
+        height: 2rem;
+    }
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 10rem;
+    top: 5rem;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext,
+  .tooltip:active .tooltiptext {
+    visibility: visible;
+  }
+}
+}

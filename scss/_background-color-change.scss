@@ -1,0 +1,29 @@
+.background-color-change {
+
+    header svg {
+        margin: 1rem;
+        height: 3rem;
+        box-shadow: none;
+        path {
+              fill: black;
+        stroke: rgb(0, 0, 0);
+        }
+      
+        border-radius: 50%;
+    }
+
+    
+    .main-title {
+        background: url("../images/pastel.jpg");
+        border: 5px #ffffff solid;
+        color: #2b2b2b;
+        text-shadow:  0 0 5px rgb(255, 173, 173),
+        0 0 10px rgb(240, 196, 196);
+        box-shadow:  0 0 5px rgb(255, 173, 173),
+        0 0 10px rgb(240, 196, 196);
+       
+       
+    }
+
+    
+}

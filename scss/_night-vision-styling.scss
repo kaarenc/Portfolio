@@ -1,0 +1,73 @@
+.wrapper.night-vision{
+
+
+    background-color: black;
+    color: #ffffffc1;
+
+
+    
+    
+    .main-title {
+        background: url('../images/bw-background3.jpg');
+        background-color: rgba(0, 0, 0, 0.797);
+        object-fit: contain;
+        object-position: center;
+        color: rgb(0, 0, 0);
+        border: double 5px white;
+    }
+   .home-wrapper .main-navigation{
+        background-color: none;
+        width: 100%;
+        color: white;
+        ul {
+            border-top: 1px solid #ffffffc1;
+        
+     li{
+         border-top: 1px solid #ffffffc1;
+     
+        a {
+        color: #ffffffc1;
+    }}
+    li.about-link {
+        border-top: none;
+    }
+}}
+}
+
+
+
+
+
+ 
+
+@media (min-width: $breakpoint-tablet) {
+    .home-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4 1fr;
+    }
+    .main-title {
+        text-align: center;
+        min-height: 25rem;
+        margin: auto;
+        grid-row: 2/3; 
+    }
+
+    
+    .home-wrapper .menu{
+        .main-navigation{
+           ul {
+           border-top: none;
+       
+
+        li.about-link {
+            border-top: none;
+        }
+       } 
+        }
+       
+      
+    }
+
+    
+}
